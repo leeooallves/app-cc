@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="339.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientePagarFaturasController">
+   <children>
+      <Pane prefHeight="121.0" prefWidth="339.0" style="-fx-background-color: blue;">
+         <children>
+            <ImageView fitHeight="102.0" fitWidth="200.0" layoutX="78.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bb.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="79.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o id da fatura" />
+      <Button fx:id="btPagar" layoutX="62.0" layoutY="246.0" mnemonicParsing="false" text="Pagar" />
+      <Button fx:id="btVoltar" layoutX="146.0" layoutY="246.0" mnemonicParsing="false" text="Voltar" />
+      <TextField fx:id="txIdFatura" layoutX="79.0" layoutY="188.0" />
+   </children>
+</AnchorPane>

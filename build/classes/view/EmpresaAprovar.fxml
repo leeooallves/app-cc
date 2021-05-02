@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmpresaAprovarController">
+   <stylesheets>
+ 
+    </stylesheets>
+   <children>
+      <Pane prefHeight="108.0" prefWidth="399.0" style="-fx-background-color: blue;">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="200.0" layoutX="118.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bb.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btAprovar" layoutX="55.0" layoutY="291.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Aprovar" />
+      <Button fx:id="btRecusar" layoutX="205.0" layoutY="291.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Recusar" />
+      <Button fx:id="btVoltar" layoutX="205.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Voltar" />
+      <ScrollPane layoutX="52.0" layoutY="128.0" prefHeight="145.0" prefWidth="306.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="272.0" prefWidth="319.0">
+               <children>
+                  <TableView fx:id="tbListaAprovacao" prefHeight="145.0" prefWidth="306.0">
+                     <columns>
+                        <TableColumn id="nomeColuna" fx:id="nomeColuna" prefWidth="75.0" text="Nome" />
+                       
+                        <TableColumn id="idColuna" fx:id="idColuna" prefWidth="75.0" text="ID" />
+                        <TableColumn id="rendaColuna"  fx:id="rendaColuna" prefWidth="75.0" text="Renda" />
+                        <TableColumn id="statusColuna" fx:id="statusColuna" prefWidth="75.0" text="Status" />
+                     </columns></TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>   
+</AnchorPane>

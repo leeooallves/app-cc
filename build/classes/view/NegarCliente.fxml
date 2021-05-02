@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="331.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NegarClienteController">
+   <children>
+      <Pane prefHeight="116.0" prefWidth="286.0" style="-fx-background-color: blue;">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="140.0" layoutX="73.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Documents/NetBeansProjects/AppCartaoC/src/view/bb.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="81.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informe o id do cliente:" />
+      <TextField fx:id="txId" layoutX="68.0" layoutY="207.0" />
+      <Button fx:id="btOk" layoutX="93.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Ok" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="397.0" prefWidth="418.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmpresaController">
+    <stylesheets>
+       
+    </stylesheets>
+   <children>
+      <Button fx:id="btAprovarClientes" layoutX="140.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Aprovar Clientes" />
+      <Button fx:id="btVerDados" layoutX="140.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Ver dados dos clientes" />
+      <Button fx:id="btBloquearCartao" layoutX="140.0" layoutY="261.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Bloquear Cartao" />
+      <Pane prefHeight="115.0" prefWidth="418.0" style="-fx-background-color: blue;">
+         <children>
+            <ImageView fitHeight="81.0" fitWidth="200.0" layoutX="136.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bb.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btCancelarCartao" layoutX="140.0" layoutY="220.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Cancelar Cartao" />
+      <Button fx:id="btDesbloquearCartao" layoutX="140.0" layoutY="303.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Desbloquear Cartao" />
+      <Button fx:id="btSair" layoutX="140.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Sair" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmpresaDefinirNumeroController">
+   <children>
+      <Text layoutX="15.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero do cartão" />
+      <Text layoutX="18.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha do cartão" />
+      <Text layoutX="19.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do cliente" />
+      <Text layoutX="21.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de emissão" />
+      <Text layoutX="23.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Validade" />
+      <Text layoutX="24.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CC" />
+      <Text layoutX="22.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variante" />
+      <Text layoutX="18.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fechamento" />
+      <Text layoutX="19.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data vencimento" />
+      <Text layoutX="21.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor Limite" />
+      <TextField fx:id="txNmCartao" layoutX="134.0" layoutY="126.0" />
+      <TextField fx:id="txSenha" layoutX="134.0" layoutY="155.0" />
+      <TextField fx:id="txNomeCliente" layoutX="134.0" layoutY="183.0" />
+      <TextField fx:id="txDataEmissao" layoutX="134.0" layoutY="215.0" />
+      <TextField fx:id="txValidade" layoutX="134.0" layoutY="244.0" />
+      <TextField fx:id="txCC" layoutX="134.0" layoutY="274.0" />
+      <TextField fx:id="txDataFechamento" layoutX="134.0" layoutY="335.0" />
+      <TextField fx:id="txVencimento" layoutX="134.0" layoutY="373.0" />
+      <TextField fx:id="txValorLimite" layoutX="135.0" layoutY="405.0" />
+      <TextField fx:id="txVariante" layoutX="132.0" layoutY="303.0" />
+      <Pane prefHeight="81.0" prefWidth="404.0" style="-fx-background-color: blue;">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="149.0" layoutX="145.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bb.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btCadastrar" layoutX="317.0" layoutY="348.0" mnemonicParsing="false" text="Cadastrar" />
+      <Button fx:id="btSair" layoutX="317.0" layoutY="389.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Sair" />
+      <TextField fx:id="txIdCliente" layoutX="133.0" layoutY="92.0" />
+      <Text layoutX="14.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id cliente" />
+   </children>
+</AnchorPane>

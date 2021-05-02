@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="383.0" style="-fx-background-color: blue;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <stylesheets>
+        <URL value="@cartaocredito.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="txEmail" layoutX="117.0" layoutY="146.0" promptText="Email" />
+      <PasswordField fx:id="txSenha" layoutX="117.0" layoutY="187.0" promptText="Senha" />
+      <Button fx:id="btSair" layoutX="214.0" layoutY="232.0" mnemonicParsing="false" text="Sair" />
+      <Button fx:id="btAcessar" layoutX="121.0" layoutY="232.0" mnemonicParsing="false" text="Entrar" />
+      <Button fx:id="btSolicitar" layoutX="138.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Solicitar cartão" />
+      <ImageView fitHeight="116.0" fitWidth="218.0" layoutX="87.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bb.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
