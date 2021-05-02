@@ -6,15 +6,9 @@
 package controller;
 
 import DAO.ClienteDao;
-import DAO.ConexaoBD;
 import app.Empresa;
 import app.EmpresaBloquearCartao;
-import app.Login;
-import com.mysql.cj.protocol.Resultset;
-import com.mysql.cj.xdevapi.Result;
-import java.io.IOException;
 import java.net.URL;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -26,6 +20,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.CartaoCredito;
 import model.Cliente;
+import javafx.scene.control.Alert;
 
 /**
  * FXML Controller class
@@ -66,19 +61,48 @@ public class EmpresaBloquearCartaoController implements Initializable {
         });
     }
 
+//    private void bloquearCartao() throws SQLException {
+//        CartaoCredito cc = new CartaoCredito();
+//        Cliente cliente = new Cliente();
+//        ClienteDao bd = new ClienteDao();
+//
+//        cliente.setCpf(txCPF.getText());
+//        cliente = bd.buscarCpf(cliente);
+//        
+//        cc.setIdCartao(cliente.getIdCartao());
+//        cc.setIdUsuario(cliente.getId());
+//        bd.bloquearCartao(cc);
+//
+//    }
+    
     private void bloquearCartao() throws SQLException {
         CartaoCredito cc = new CartaoCredito();
         Cliente cliente = new Cliente();
         ClienteDao bd = new ClienteDao();
+        try {
+            cliente.setCpf(txCPF.getText());
+            cliente = bd.buscarCpf(cliente);
+            cc.setIdCartao(cliente.getIdCartao());
+            cc.setIdUsuario(cliente.getId());
+            if (bd.bloquearCartao(cc)) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Aviso");
+                alert.setContentText("Cartao bloqueado com sucesso!");
+                alert.show();
 
-        cliente.setCpf(txCPF.getText());
-        cliente = bd.buscarCpf(cliente);
-        
-        cc.setIdCartao(cliente.getIdCartao());
-        cc.setIdUsuario(cliente.getId());
-        bd.bloquearCartao(cc);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("ERRO");
+                alert.setContentText("Erro ao bloquear o cartao!");
+                alert.show();
+            }
+
+        } catch (Exception e) {
+
+        }
 
     }
+    
      public void fechar() {
       EmpresaBloquearCartao.getStage().close();
     }   

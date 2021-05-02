@@ -239,28 +239,28 @@ public class ClienteDao {
 
     }
 
-    public void bloquearCartao(CartaoCredito cc) {
-        //Cria conexão com o banco
-        ConexaoBD bd = new ConexaoBD();
-        Connection con = bd.getConexao();
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-
-        try {
-            stmt = con.prepareStatement("UPDATE cartao_credito SET status_cartao = " + 1 + " WHERE cartao_credito.id_cartao = " + cc.getIdCartao() + " AND cartao_credito.id_cliente = " + cc.getIdUsuario());
-//            stmt.setInt(1, cc.getIdCartao());
-//            stmt.setInt(2, cc.getIdUsuario());
-            System.out.println("bloqueou cartão");
-
-            stmt.executeUpdate();
-
-        } catch (Exception e) {
-            System.out.println("erro: " + e);
-        } finally {
-            ConexaoBD.fechaConexao(con);
-        }
-
-    }
+//    public void bloquearCartao(CartaoCredito cc) {
+//        //Cria conexão com o banco
+//        ConexaoBD bd = new ConexaoBD();
+//        Connection con = bd.getConexao();
+//        PreparedStatement stmt = null;
+//        ResultSet rs = null;
+//
+//        try {
+//            stmt = con.prepareStatement("UPDATE cartao_credito SET status_cartao = " + 1 + " WHERE cartao_credito.id_cartao = " + cc.getIdCartao() + " AND cartao_credito.id_cliente = " + cc.getIdUsuario());
+////            stmt.setInt(1, cc.getIdCartao());
+////            stmt.setInt(2, cc.getIdUsuario());
+//            System.out.println("bloqueou cartão");
+//
+//            stmt.executeUpdate();
+//
+//        } catch (Exception e) {
+//            System.out.println("erro: " + e);
+//        } finally {
+//            ConexaoBD.fechaConexao(con);
+//        }
+//
+//    }
 
     public void desbloquearCartao(CartaoCredito cc) {
         //Cria conexão com o banco
@@ -463,6 +463,30 @@ public class ClienteDao {
         }
 
         return rs;
+
+    }
+    
+    public boolean bloquearCartao(CartaoCredito cc) {
+        //Cria conexão com o banco
+        ConexaoBD bd = new ConexaoBD();
+        Connection con = bd.getConexao();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE cartao_credito SET status_cartao = " + 1 + " WHERE cartao_credito.id_cartao = " + cc.getIdCartao() + " AND cartao_credito.id_cliente = " + cc.getIdUsuario());
+
+            System.out.println("bloqueou cartão");
+
+            stmt.executeUpdate();
+            return true;
+
+        } catch (Exception e) {
+            System.out.println("erro: " + e);
+            return false;
+        } finally {
+            ConexaoBD.fechaConexao(con);
+        }
 
     }
 
