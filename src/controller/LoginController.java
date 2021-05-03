@@ -1,15 +1,12 @@
 package controller;
 
 import DAO.ClienteDao;
-import DAO.ConexaoBD;
 import app.CadastroPessoa;
 import app.Empresa;
 import app.Login;
 import app.PrincipalCliente;
-import com.mysql.cj.protocol.Resultset;
 import java.io.IOException;
 import java.net.URL;
-import java.security.Principal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -23,7 +20,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import model.*;
 

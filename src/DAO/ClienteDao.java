@@ -261,7 +261,6 @@ public class ClienteDao {
 //        }
 //
 //    }
-
     public void desbloquearCartao(CartaoCredito cc) {
         //Cria conexão com o banco
         ConexaoBD bd = new ConexaoBD();
@@ -465,11 +464,10 @@ public class ClienteDao {
         return rs;
 
     }
-    
+
     public boolean bloquearCartao(CartaoCredito cc) {
         //Cria conexão com o banco
-        ConexaoBD bd = new ConexaoBD();
-        Connection con = bd.getConexao();
+        Connection con = new ConexaoBD().getConexao();
         PreparedStatement stmt = null;
         ResultSet rs = null;
 
@@ -488,6 +486,34 @@ public class ClienteDao {
             ConexaoBD.fechaConexao(con);
         }
 
+    }
+
+    public ResultSet consultaCartao(CartaoCredito cc) throws SQLException {
+        ResultSet rs = null;
+        try {
+            Connection con = new ConexaoBD().getConexao();
+            PreparedStatement stmt = con.prepareStatement("SELECT * FROM cartao_credito WHERE id_cartao=?");
+            stmt.setInt(1, cc.getIdCartao());
+            rs = stmt.executeQuery();
+
+        } catch (Exception e) {
+            System.out.println("erro: " + e);
+        }
+        return rs;
+
+    }
+
+    public ResultSet consultaCompras(Cliente cliente) throws SQLException {
+        ResultSet rs = null;
+        try {
+            Connection con = new ConexaoBD().getConexao();
+            PreparedStatement stmt = con.prepareStatement("SELECT * FROM compra_cliente WHERE id_cliente=?");
+            stmt.setInt(1, cliente.getId());
+            rs = stmt.executeQuery();
+        } catch (Exception e) {
+        }
+
+        return rs;
     }
 
 }
